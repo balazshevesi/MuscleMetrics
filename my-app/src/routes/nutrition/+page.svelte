@@ -1,13 +1,18 @@
 <script>
 	import { slide } from 'svelte/transition';
-	import { Plus } from 'lucide-svelte';
+	import { ChevronLeft, ChevronRight, Plus } from 'lucide-svelte';
 	import Entry from './Entry.svelte';
+	import MicronutrientEntry from './MicronutrientEntry.svelte';
 </script>
 
-<div in:slide={{ axis: 'y' }} out:slide={{ axis: 'y' }}>
+<div>
 	<div class="mx-auto w-full max-w-5xl items-center px-4 py-16">
-		<h2 class="text-base-content mb-6 text-3xl font-bold">Today</h2>
-		<div class="bg-base-100 mb-5 flex flex-col gap-2 rounded-lg p-6 pb-2 shadow">
+		<h2 class="text-base-content mb-6 flex items-center gap-3 text-2xl font-bold">
+			<ChevronLeft class="stroke-3 size-7" />
+			<span>Today</span>
+			<ChevronRight class="stroke-3 size-7" />
+		</h2>
+		<div class="bg-base-100 mb-5 flex flex-col gap-2 rounded-lg px-8 pb-8 pt-6 shadow-xl">
 			<div class="mb-2 flex justify-between">
 				<div class="text-content mb-4 text-xl font-semibold">Nutrition Log</div>
 				<div class="ml-6 flex gap-4">
@@ -15,7 +20,7 @@
 					<div class="btn btn-outline"><Plus class="size-6" />Exercise</div>
 				</div>
 			</div>
-			<div class="bg-base-200 mb-4 flex flex-col rounded-lg">
+			<div class="flex flex-col gap-1 overflow-hidden rounded-lg">
 				<Entry></Entry>
 				<Entry></Entry>
 				<Entry></Entry>
@@ -24,7 +29,7 @@
 			</div>
 		</div>
 
-		<div class="mb-5 flex w-full rounded-lg px-10 py-6 shadow">
+		<div class="bg-base-100 mb-5 flex w-full rounded-xl px-8 pb-8 pt-6 shadow-lg">
 			<div class="flex flex-col">
 				<div class="text-content mb-6 text-xl font-semibold">Energy Summary</div>
 				<div class="flex">
@@ -120,6 +125,52 @@
 								<progress class="progress progress-primary h-2.5" value={69} max="100"></progress>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-base-100 mb-5 flex w-full flex-col rounded-xl px-8 pb-8 pt-6 shadow-lg">
+			<div class="text-content mb-5 text-xl font-semibold">Micronutrients</div>
+			<div class="flex gap-0">
+				<div class="flex h-fit flex-1 flex-col gap-5 rounded-lg p-2">
+					<div class="flex flex-col gap-1 overflow-hidden rounded-lg">
+						<div class="bg-base-300 px-2 py-1 font-semibold">Vitamins</div>
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+					</div>
+					<div class="flex flex-col gap-1 overflow-hidden rounded-lg">
+						<div class="bg-base-300 rounded-t-lg px-2 py-1 font-semibold">Vitamins</div>
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+					</div>
+				</div>
+				<div class="flex h-fit flex-1 flex-col gap-5 rounded-lg p-2">
+					<div class="flex flex-col gap-1 overflow-hidden rounded-lg">
+						<div class="bg-base-300 rounded-t-lg px-2 py-1 font-semibold">Vitamins</div>
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+					</div>
+					<div class="flex flex-col gap-1 overflow-hidden rounded-lg">
+						<div class="bg-base-300 rounded-t-lg px-2 py-1 font-semibold">Vitamins</div>
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
+						<MicronutrientEntry />
 					</div>
 				</div>
 			</div>

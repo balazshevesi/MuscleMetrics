@@ -1,5 +1,5 @@
 <script>
-	import { slide } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 </script>
 
-<div in:slide={{ axis: 'y' }} out:slide={{ axis: 'y' }}>dashboard</div>
+<div in:fly={{ y: -20 }} out:fly={{ y: 20 }}>dashboard</div>
