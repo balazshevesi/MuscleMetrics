@@ -1,0 +1,7 @@
+{
+  "dependencies": { "dotenv": "^16.4.7", "drizzle-orm": "^0.40.0", "mysql2": "^3.13.0" },
+  "devDependencies": {
+    "drizzle-kit": "^0.30.5",
+    "tsx": "^4.19.3"
+  }
+}

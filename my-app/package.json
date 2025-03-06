@@ -39,6 +39,7 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
+    "better-auth": "^1.2.3",
     "daisyui": "latest",
     "drizzle-orm": "^0.40.0",
     "lucide-svelte": "^0.477.0",

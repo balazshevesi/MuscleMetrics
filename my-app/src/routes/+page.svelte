@@ -1,5 +1,19 @@
 <script>
 	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
+	import { createAuthClient } from 'better-auth/svelte';
+
+	export const authClient = createAuthClient({
+		baseURL: 'http://localhost:3000' // the base url of your auth server
+	});
+
+	const signInGoogle = async () => {
+		await authClient.signIn.social({
+			provider: 'google',
+			callbackURL: 'http://localhost:5173/nutrition',
+			errorCallbackURL: '/error',
+			newUserCallbackURL: '/welcome'
+		});
+	};
 </script>
 
 <div class="min-h-screen">
@@ -29,9 +43,9 @@
 								></path></g
 							></svg
 						>
-						Signup with Email
+						Signin with Email
 					</button>
-					<button class="btn border-[#e5e5e5] bg-white text-black">
+					<button onclick={() => signInGoogle()} class="btn border-[#e5e5e5] bg-white text-black">
 						<svg
 							aria-label="Google logo"
 							width="16"
@@ -50,7 +64,7 @@
 								></path></g
 							></svg
 						>
-						Signup with Google
+						Signin with Google
 					</button>
 					<button class="btn border-black bg-black text-white">
 						<svg
@@ -64,7 +78,7 @@
 								d="M1006.933 812.8c-32 153.6-115.2 211.2-147.2 249.6-32 25.6-121.6 25.6-153.6 6.4-38.4-25.6-134.4-25.6-166.4 0-44.8 32-115.2 19.2-128 12.8-256-179.2-352-716.8 12.8-774.4 64-12.8 134.4 32 134.4 32 51.2 25.6 70.4 12.8 115.2-6.4 96-44.8 243.2-44.8 313.6 76.8-147.2 96-153.6 294.4 19.2 403.2zM802.133 64c12.8 70.4-64 224-204.8 230.4-12.8-38.4 32-217.6 204.8-230.4z"
 							></path></svg
 						>
-						Signup with Apple
+						Signin with Apple
 					</button>
 					<div class="pt-4 text-sm">
 						Already have an account? <span class="font-medium">Login</span>

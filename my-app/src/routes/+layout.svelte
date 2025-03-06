@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import { client } from '$lib/client';
 	let { children } = $props();
 	import { Apple, Dumbbell, LayoutDashboard, Moon, Sun, UserRound } from 'lucide-svelte';
 </script>

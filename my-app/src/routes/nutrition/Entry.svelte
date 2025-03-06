@@ -9,7 +9,6 @@
 		<Apple class="stroke-3 size-5 stroke-red-600" />
 	</div>
 	<div class="ml-3 flex-1 font-medium">Raw Egg</div>
-	<div class="flex-1">7.21 SEK</div>
 	<div class="flex-1">15:36</div>
 	<div class="text-eight flex-right">2</div>
 	<div class="flex-1">large</div>

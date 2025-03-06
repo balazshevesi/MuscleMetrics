@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1741268388176,
+      "tag": "0000_bright_jocasta",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1741269536361,
+      "tag": "0001_abnormal_vapor",
+      "breakpoints": true
+    }
+  ]
+}
